@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Зашифровка";
+}
+<h1>Как будет введён текст?</h1>
+
+<p>Как бы то ни было, ключ шифровки надо будет ввести вручную.</p>
+<a asp-controller="Home" asp-action="txtDecoder">
+    <input type="button" class="btn btn-light border-dark" value="Вручную" />
+ </a>
+ <p></p>
+ <a asp-controller="Home" asp-action="docDecoder">
+    <input type="button" class="btn btn-dark d-block border-light" value=".doc файлом" />
+ </a>

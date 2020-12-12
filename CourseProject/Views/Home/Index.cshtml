@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Главная";
+}
+@model List<string>;
+<div class="text-center">
+    <h1 class="display-4">@Model[0]</h1>
+    <p>@Model[1]</p>
+    <a asp-controller="Home" asp-action="Privacy"><input type="button" class="btn btn-info w-50" value="Зашифровать текст"/></a>
+    <p></p>
+    <a asp-controller="Home" asp-action="Saver"><input type="button" class="btn btn-info w-50" value="Сохранить расшифрованный текст" /></a>
+</div>

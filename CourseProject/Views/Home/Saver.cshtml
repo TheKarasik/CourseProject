@@ -1,0 +1,54 @@
+﻿@model FileModel
+@{
+    ViewData["Title"] = "Сохранение текста";
+}
+
+<h1>Сохранение расшифрованного текста</h1>
+<p>Ввведите имя файла и путь для сохранения</p>
+<form asp-controller="Home" asp-action="Saver"
+      enctype="multipart/form-data" method="post">
+    <div class="border p-3">
+        @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+        <div class="form-group row">
+            <h2 class="text-info pl-3">Форма файла для сохранения</h2>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Path"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Path" class="form-control" />
+                        <span asp-validation-for="Path" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Name"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-8 offset-4 row">
+
+                        <div class="col">
+                            <input type="submit" class="btn btn-info w-100" value="Сохранить" />
+                        </div>
+                        <div class="col">
+                            <a asp-action="Index" class="btn btn-success w-100"><i class="fas fa-sign-out-alt"></i> Назад</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                @* Keep this empty *@
+            </div>
+        </div>
+    </div>
+</form>
+
